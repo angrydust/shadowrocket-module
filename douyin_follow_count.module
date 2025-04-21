@@ -1,0 +1,8 @@
+#!name=抖音真实粉丝数
+#!desc=抖音粉丝数
+
+[Script]
+抖音粉丝数查询 = type=http-response,pattern=https:\/\/(www\.douyin\.com\/aweme\/v1\/web\/user\/profile\/other\/|live\.douyin\.com\/webcast\/user\/profile\/),requires-body=true,max-size=1048576,script-path= https://raw.githubusercontent.com/angrydust/shadowrocket-module/refs/heads/main/douyin_real_fans_count.js
+
+[MITM]
+hostname = %APPEND% *.douyin.com

@@ -8,8 +8,8 @@ try {
 
   if (url.includes("/aweme/v1/web/user/profile/other/")) {
     // 普通抖音个人页
-    if (obj.user && obj.user.follower_count !== undefined) {
-      let count = obj.user.follower_count;
+    if (obj.user && obj.user.mplatform_followers_count !== undefined) {
+      let count = obj.user.mplatform_followers_count;
       $notification.post("抖音粉丝数 (普通)", "粉丝数获取成功", `当前粉丝数：${count}`);
     } else {
       $notification.post("抖音粉丝数 (普通)", "获取失败", "未找到 follower_count 字段");

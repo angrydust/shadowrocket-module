@@ -8,20 +8,20 @@ try {
 
   if (url.includes("/aweme/v1/web/user/profile/other/")) {
     // 普通抖音个人页
-    if (obj.user && obj.user.mplatform_followers_count !== undefined) {
+    if (obj.user && obj.user.mplatform_followers_count !== undefined && obj.user.mplatform_followers_count > 10000) {
       let count = obj.user.mplatform_followers_count;
-      $notification.post("抖音粉丝数 (普通)", "粉丝数获取成功", `当前粉丝数：${count}`);
+      $notification.post("抖音粉丝数", "粉丝数获取成功", `当前粉丝数：${count}`);
     } else {
-      $notification.post("抖音粉丝数 (普通)", "获取失败", "未找到 follower_count 字段");
+      $notification.post("抖音粉丝数", "获取失败", "未找到 mplatform_followers_count 字段");
     }
 
   } else if (url.includes("/webcast/user/profile/")) {
     // 直播个人页
-    if (obj.data && obj.data.user_profile && obj.data.user_profile.follow_info && obj.data.user_profile.follow_info.follower_count !== undefined) {
+    if (obj.data && obj.data.user_profile && obj.data.user_profile.follow_info && obj.data.user_profile.follow_info.follower_count !== undefined && obj.data.user_profile.follow_info.follower_count > 10000) {
       let count = obj.data.user_profile.follow_info.follower_count;
-      $notification.post("抖音粉丝数 (直播)", "粉丝数获取成功", `当前粉丝数：${count}`);
+      $notification.post("抖音粉丝数", "粉丝数获取成功", `当前粉丝数：${count}`);
     } else {
-      $notification.post("抖音粉丝数 (直播)", "获取失败", "未找到 follower_count 字段");
+      $notification.post("抖音粉丝数", "获取失败", "未找到 follower_count 字段");
     }
 
   } else {

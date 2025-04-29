@@ -1,8 +1,0 @@
-#!name=Github 429
-#!desc=Github 429
-
-[Script]
-Github429 = type=http-request,pattern=https://*\.githubusercontent\.com,script-path=https://cdn.jsdelivr.net/gh/angrydust/shadowrocket-module@refs/heads/main/github_429.js
-
-[MITM]
-hostname = %APPEND% *.githubusercontent.com

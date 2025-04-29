@@ -1,0 +1,8 @@
+#!name=Github429
+#!desc=Github429
+
+[Script]
+抖音粉丝数查询 = type=http-response,pattern=^https?://(?:[\w\-]+\.)*githubusercontent\.com(?:/[\w\-./?%&=]*)?,script-path= https://raw.githubusercontent.com/angrydust/shadowrocket-module/refs/heads/main/github429.js
+
+[MITM]
+hostname = %APPEND% *.githubusercontent.com

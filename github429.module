@@ -3,7 +3,7 @@
 
 [Script]
 Github429 = type=http-request,pattern=https?://(?:[\w.-]+\.)?githubusercontent\.com(?:/[\w./?%&=~-]*)?
-,script-path= https://raw.githubusercontent.com/angrydust/shadowrocket-module/refs/heads/main/github429.js
+,script-path= https://cdn.jsdelivr.net/gh/angrydust/shadowrocket-module@refs/heads/main/github429.js
 
 [MITM]
 hostname = %APPEND% *.githubusercontent.com
